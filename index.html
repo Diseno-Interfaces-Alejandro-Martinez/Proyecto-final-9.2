@@ -8,8 +8,6 @@
     <title>La Cocina Perfecta</title>
 </head>
 <body>
-
-    <!-- <div class="center-mark-horizontal"></div> -->
     
     <header>
         <div class="menu flex all-center">
@@ -35,7 +33,10 @@
         </div>
 
         <div class="profile flex all-center">
-            <button type="button">Perfil</button>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-circle profile-icon" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+            </svg>
         </div>
     </header>
 
@@ -45,18 +46,54 @@
     </div>
 
     <main>
-        <section>
-            <h2>Receta del Día</h2>
-            <p>Prueba esta increíble receta de sopa de calabaza perfecta para el otoño.</p>
-            <button>Ver receta</button>
+        <!-- Sección Receta del Día -->
+        <section class="recipe-of-the-day">
+            <div class="recipe-info">
+                <h2>Receta del Día</h2>
+                <p>Prueba esta increíble receta de sopa de calabaza, ideal para el otoño. ¡Llena de sabor y calidez!</p>
+                <button>Ver receta</button>
+            </div>
+            <div class="recipe-image">
+                <img src="imgs/sopa-calabaza.jpg" alt="Sopa de calabaza servida en un bowl con hierbas frescas por encima.">
+            </div>
         </section>
-    </main>
+    
+        <!-- Sección Otras Recetas -->
+        <section class="other-recipes">
+            <h2>Más recetas deliciosas</h2>
+            <div class="recipe-list">
+                <article class="recipe-card">
+                    <img src="imgs/ensalada.jpg" alt="Ensalada fresca con frutas y nueces.">
+                    <h3>Ensalada Fresca</h3>
+                    <p>Una opción saludable y ligera para cualquier momento.</p>
+                    <button>Descubrir</button>
+                </article>
+                <article class="recipe-card">
+                    <img src="imgs/pasta.jpg" alt="Pasta con salsa de tomate y albahaca.">
+                    <h3>Pasta Clásica</h3>
+                    <p>El sabor tradicional italiano que nunca falla.</p>
+                    <button>Descubrir</button>
+                </article>
+                <article class="recipe-card">
+                    <img src="imgs/postre.jpg" alt="Postre de chocolate con fresas.">
+                    <h3>Postre de Chocolate</h3>
+                    <p>Un dulce final perfecto para cualquier comida.</p>
+                    <button>Descubrir</button>
+                </article>
+            </div>
+        </section>
+    </main>    
 
     <footer>
-        <p>&copy; 2024 Todos los derechos reservados.</p>
-        <!-- <p><a href="#privacidad">Política de Privacidad</a> | <a href="#terminos">Términos de Uso</a></p>
-        <p>Contacto: <a href="mailto:alexadrialvaro@gmail.com">alexadrialvaro@gmail.com</a></p> -->
-    </footer>      
+        <div class="footer-content">
+            <p>&copy; 2024 Todos los derechos reservados.</p>
+            <p>
+                <a href="#privacidad">Política de Privacidad</a> | 
+                <a href="#terminos">Términos de Uso</a>
+            </p>
+            <p>Contacto: <a href="mailto:alexadrialvaro@gmail.com">alexadrialvaro@gmail.com</a></p>
+        </div>
+    </footer>        
     
     <script src="script.js"></script>
 </body>
