@@ -1,0 +1,310 @@
+/* Variables generales */
+:root {
+    --color-principal: #ffeb8c; /* Amarillo cálido */
+    --color-header: #171717;    /* Gris oscuro */
+    --color-fondo: #252525;    /* Fondo oscuro */
+    --color-texto: #e0e0e0;    /* Texto claro */
+    --color-acento: #d4a017;   /* Dorado oscuro */
+    --color-hover: #ffba80;    /* Naranja suave */
+    --color-seccion: rgba(255, 255, 255, 0.05); /* Fondo secciones */
+    --borde-seccion: rgba(255, 255, 255, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Centrado general */
+.flex {
+    display: flex;
+}
+
+.all-center {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pading general para toda la página de la receta */
+.recipe {
+    padding: 2em 2em 0 2em;
+}
+
+/* Estilos de elementos generales */
+a {
+    color: var(--color-principal);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-hover);
+}
+
+button {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-hover);
+    color: var(--color-texto);
+}
+
+
+/* Estilos del header */
+header {
+    display: grid;
+    grid-template-areas: 
+        "menu title profile";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
+
+    height: 100px;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-header);
+    /* background-color: transparent; */
+    color: var(--color-principal);
+}
+
+
+.menu {
+    grid-area: menu;
+}
+
+.title {
+    grid-area: title;
+    
+    h1 {
+        font-size: 3.2em;
+    }
+}
+
+.profile {
+    grid-area: profile;
+}
+
+
+#menu-btn {
+    font-size: 1.8em;
+    font-weight: bold;
+
+    padding: 0.5em;
+    
+    background-color: inherit;
+    color: var(--color-principal);
+    
+    border: none;
+    border-radius: 7px;
+    
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#menu-btn:hover {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+}
+
+
+/* Perfil con ícono SVG */
+.profile-icon {
+    width: 60px;
+    /* height: 50px; */
+    color: var(--color-principal);
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.profile-icon:hover {
+    color: var(--color-hover);
+    transform: scale(1.1);
+}
+
+.profile-icon:active {
+    transform: scale(1);
+}
+
+
+
+/* Menú deslizante (sidebar) */
+.sidebar {
+
+    height: 100%;
+    width: 250px;
+    
+    position: fixed;
+    top: 0;
+    left: -250px;
+    
+    background-color: var(--color-header);
+    color: var(--color-principal);
+    
+    transition: 0.3s;
+    
+    padding-top: 1em;
+
+    z-index: 2;
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            padding: 1em;
+            font-weight: bold;
+
+            a {
+                color: #ffeb8c;
+                text-decoration: none;
+                font-size: 1.6em;
+            }
+
+            a:hover {
+                color: #bcbcbc;
+            }
+        }
+    }
+}
+
+
+/* Botón de cierre del sidebar */
+#close-btn {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    
+    font-size: 2em;
+    background: none;
+    color: #ffeb8c;
+    
+    border: none;
+    cursor: pointer;
+}
+
+/* Clase para mostrar el menú */
+.sidebar.active {
+    left: 0;
+}
+
+/* Capa oscura de fondo (overlay) */
+.overlay {
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    
+    visibility: hidden;
+    
+    transition: opacity 0.3s ease;
+    
+    z-index: 1;
+}
+
+/* Mostrar la capa de fondo */
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/* Imagen destacada */
+.recipe-image img {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    margin: 1em 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Información de la receta */
+.recipe-info {
+    text-align: center;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    background-color: var(--color-seccion);
+    border: 1px solid var(--borde-seccion);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    
+    h2 {
+        color: var(--color-principal);
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+    }
+}
+
+.details {
+    margin: 1em 0;
+}
+
+.details p {
+    font-size: 1em;
+    margin: 0.5em 0;
+}
+
+/* Ingredientes y pasos */
+.recipe-ingredients,
+.recipe-steps {
+    background-color: var(--color-seccion);
+    border: 1px solid var(--borde-seccion);
+    border-radius: 8px;
+    padding: 1.5em;
+    margin: 1em 0;
+}
+
+.recipe-ingredients h3,
+.recipe-steps h3 {
+    color: var(--color-principal);
+    font-size: 1.8em;
+    margin-bottom: 0.8em;
+    border-bottom: 2px solid var(--color-principal);
+    display: inline-block;
+    padding-bottom: 0.2em;
+}
+
+.recipe-ingredients ul,
+.recipe-steps ol {
+    margin: 1em 0;
+    padding-left: 1.5em;
+}
+
+.recipe-ingredients li,
+.recipe-steps li {
+    margin: 0.8em 0;
+    font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    text-align: center;
+    padding: 1.5em 0;
+    border-top: 2px solid var(--borde-seccion);
+    margin-top: 2em;
+}
+
+footer p {
+    font-size: 0.9em;
+    color: var(--color-principal);
+}
