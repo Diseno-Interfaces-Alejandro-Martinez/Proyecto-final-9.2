@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>La Cocina Perfecta</title>
+</head>
+<body>
+
+    <!-- <div class="center-mark-horizontal"></div> -->
+    
+    <header>
+        <div class="menu flex all-center">
+            <button id="menu-btn">&#9776; Menú</button>
+        
+            <!-- Menú deslizante -->
+            <nav id="sidebar" class="sidebar">
+                <button id="close-btn">&times; Cerrar</button>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#recetas">Recetas</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <!-- Cuando se abra el menú, se oscurecerá el resto de la página -->
+            <div id="overlay" class="overlay"></div>
+        </div>
+
+        <div class="title flex all-center">
+            <h1>LA COCINA PERFECTA</h1>
+        </div>
+
+        <div class="profile flex all-center">
+            <button type="button">Perfil</button>
+        </div>
+    </header>
+
+    <div class="main-image">
+        <img src="imgs/principal-image.jpeg" alt="Cheff sonriendo mientras cocina en una cocina moderna y con colores cálidos.">
+        <h2>¡Descubre las recetas más increíbles!</h2>
+    </div>
+
+    <main>
+        <section>
+            <h2>Receta del Día</h2>
+            <p>Prueba esta increíble receta de sopa de calabaza perfecta para el otoño.</p>
+            <button>Ver receta</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Todos los derechos reservados.</p>
+        <!-- <p><a href="#privacidad">Política de Privacidad</a> | <a href="#terminos">Términos de Uso</a></p>
+        <p>Contacto: <a href="mailto:alexadrialvaro@gmail.com">alexadrialvaro@gmail.com</a></p> -->
+    </footer>      
+    
+    <script src="script.js"></script>
+</body>
+</html>
