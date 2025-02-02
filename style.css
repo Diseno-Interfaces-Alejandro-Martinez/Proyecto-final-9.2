@@ -58,18 +58,10 @@
     height: 20px;
 }
 
-
+.svg-text-bold {
+    font-weight: 600;
+}
 
 #bigIcon, #svg {
     fill: currentColor;
-}
-
-/* Si el modo oscuro está activado */
-[data-bs-theme="dark"] #bigIcon {
-    color: white;
-}
-
-/* Si el modo claro está activado */
-[data-bs-theme="light"] #bigIcon {
-    color: black;
 }

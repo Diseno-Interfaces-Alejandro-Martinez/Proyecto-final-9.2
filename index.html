@@ -27,45 +27,12 @@
               <path
                 d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
             </symbol>
-            <symbol id="check2" viewBox="0 0 16 16">
+            <symbol id="check" viewBox="0 0 16 16">
                 <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
             </symbol>
         </svg>
 
-        <header>
-            <!-- <div class="menu flex all-center">
-                <button id="menu-btn">&#9776; Menú</button>
-            
-                Menú deslizante
-                <nav id="sidebar" class="sidebar">
-                    <button id="close-btn">&times; Cerrar</button>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#recetas">Recetas</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </nav>
-
-                Cuando se abra el menú, se oscurecerá el resto de la página
-                <div id="overlay" class="overlay"></div> -->
-            <!-- </div>
-
-            <div class="title flex all-center">
-                <h1>LA COCINA PERFECTA</h1>
-            </div>
-
-            <div class="profile flex all-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-circle profile-icon" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                </svg>
-            </div> -->
-            
-            
-
-
-            <!-- Empezamos el nav -->
+        <header class="sticky-top">
             <nav class="navbar navbar-expand-md bg-body-tertiary">
                 <div class="container-fluid">
                     <!-- Ponemos el botón con el icono de menú de hamburguesa, que en pantallas pequeñas será el que pulsemos para desplegar el menú, en pantallas a partir de md ya no aparecerá -->
@@ -75,13 +42,19 @@
 
                     <!-- En este div está el contenido del menú que se desplegará al darle al botón en pantallas sm y xs -->
                     <div class="collapse navbar-collapse order-3 order-md-1" id="navbarTogglerDemo01">
-                        <a class="navbar-brand" href="#">Hidden brand</a>
+                        <a class="navbar-brand" href="#">La cocina perfecta</a>
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link active" aria-current="Home" href="#">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
+                                <a class="nav-link" href="#recetas">Recetas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#blog">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contacto">Contacto</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
@@ -106,9 +79,9 @@
                                 <svg class="me-3 opacity-50 svg-size">
                                     <use href="#sun-fill"></use>
                                 </svg>
-                                Light
+                                <span class="svg-text-bold">Light</span>
                                 <svg class="check ms-auto d-none svg-size">
-                                    <use href="#check2"></use>
+                                    <use href="#check"></use>
                                 </svg>
                             </button>
                         </li>
@@ -117,9 +90,9 @@
                                 <svg class="me-3 opacity-50 svg-size">
                                     <use href="#moon-stars-fill"></use>
                                 </svg>
-                                Dark
+                                <span class="svg-text-bold">Dark</span>
                                 <svg class="check ms-auto d-none svg-size">
-                                    <use href="#check2"></use>
+                                    <use href="#check"></use>
                                 </svg>
                             </button>
                         </li>
@@ -128,31 +101,50 @@
                                 <svg class="me-3 opacity-50 svg-size">
                                     <use href="#circle-half"></use>
                                 </svg>
-                                Auto
+                                <span class="svg-text-bold">Auto</span>
                                 <svg class="check ms-auto d-none svg-size">
-                                    <use href="#check2"></use>
+                                    <use href="#check"></use>
                                 </svg>
                             </button>
                         </li>
                     </ul>
+
+                    <!-- Avatar Dropdown -->
+                    <div class="dropdown order-md-3">
+                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow ms-2" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25" alt="Avatar" loading="lazy">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                            <li>
+                                <a class="dropdown-item" href="#">Perfil</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Configuración</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Cerrar sesión</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
+        </header>
+        
 
-
-            <!-- Background image -->
-            <div id="imagen-principal" class="img-fluid bg-image shadow-2-strong">
-                <div class="mask">
-                    <div class="container d-flex align-items-center justify-content-center text-center h-100">
-                        <div class="text-white" data-mdb-theme="dark">
-                            <h1 class="mb-3">Learn Bootstrap 5 with MDB</h1>
-                            <h5 class="mb-4">Best & free guide of responsive web design</h5>
-                            <a class="btn btn-outline-light btn-lg m-2" data-mdb-ripple-init href="https://www.youtube.com/watch?v=c9B4TPnak1A" role="button" rel="nofollow" target="_blank">Start tutorial</a>
-                            <a class="btn btn-outline-light btn-lg m-2" data-mdb-ripple-init href="https://mdbootstrap.com/docs/standard/" target="_blank" role="button">Download MDB UI KIT</a>
-                        </div>
+        <!-- Imagen de fondo -->
+        <div id="imagen-principal" class="img-fluid bg-image shadow-2-strong">
+            <div class="mask">
+                <div class="container d-flex align-items-center justify-content-center text-center h-100">
+                    <div class="text-white" data-mdb-theme="dark">
+                        <h1 class="mb-3">Aprende a cocinar como un auténtico chef</h1>
+                        <h5 class="mb-4">Las mejores recetas del mundo sobre de la gastronomía</h5>
+                        <a class="btn btn-outline-light btn-lg m-2" data-mdb-ripple-init href="https://www.youtube.com/watch?v=c9B4TPnak1A" role="button" rel="nofollow" target="_blank">Start tutorial</a>
+                        <a class="btn btn-outline-light btn-lg m-2" data-mdb-ripple-init href="https://mdbootstrap.com/docs/standard/" target="_blank" role="button">Download MDB UI KIT</a>
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
+
 
         <main>
             <!-- Sección Receta del Día -->
