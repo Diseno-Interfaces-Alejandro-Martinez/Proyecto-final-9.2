@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         
-        <title>La Cocina Perfecta</title>
+        <title>LACOPE</title>
     </head>
     <body>
         
@@ -42,7 +42,7 @@
 
                     <!-- En este div está el contenido del menú que se desplegará al darle al botón en pantallas sm y xs -->
                     <div class="collapse navbar-collapse order-3 order-md-1" id="navbarTogglerDemo01">
-                        <a class="navbar-brand" href="#">La cocina perfecta</a>
+                        <a class="navbar-brand fw-bold" href="#">LACOPE</a>
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="Home" href="#">Inicio</a>
@@ -56,14 +56,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#contacto">Contacto</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                            </li>
                         </ul>
-                        <!-- <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form> -->
                     </div>
 
                     <!-- Aquí se crea el botón para el cambio de tema, como también tiene un desplegable para las opciones creamos una lista no ordenada con las opciones -->
@@ -131,69 +124,118 @@
         </header>
         
 
-        <!-- Imagen de fondo -->
+        <!-- Imagen de fondo e información de bienvenida -->
         <div id="imagen-principal" class="img-fluid bg-image shadow-2-strong">
             <div class="mask">
                 <div class="container d-flex align-items-center justify-content-center text-center h-100">
                     <div class="text-white" data-mdb-theme="dark">
-                        <h1 class="mb-3">Aprende a cocinar como un auténtico chef</h1>
-                        <h5 class="mb-4">Las mejores recetas del mundo sobre de la gastronomía</h5>
-                        <a class="btn btn-outline-light btn-lg m-2" data-mdb-ripple-init href="https://www.youtube.com/watch?v=c9B4TPnak1A" role="button" rel="nofollow" target="_blank">Start tutorial</a>
-                        <a class="btn btn-outline-light btn-lg m-2" data-mdb-ripple-init href="https://mdbootstrap.com/docs/standard/" target="_blank" role="button">Download MDB UI KIT</a>
+                        <h1 class="mb-3 text fw-bold">LACOPE</h1>
+                        <h5 class="mb-4">Descubre recetas deliciosas, tutoriales en video y consejos de chefs expertos</h5>
+                        <a class="btn btn-outline-light btn-lg m-2" href="#recetas">Explorar Recetas</a>
                     </div>
                 </div>
             </div>
         </div>
 
 
+        <!-- Contenido -->
         <main>
-            <!-- Sección Receta del Día -->
-            <!-- <section class="recipe-of-the-day">
-                <div class="recipe-info">
-                    <h2>Receta del Día</h2>
-                    <p>Prueba esta increíble receta de sopa de calabaza, ideal para el otoño. ¡Llena de sabor y calidez!</p>
-                    <button>Ver receta</button>
+            <section id="recetas" class="section-bg py-5">
+                <div class="container">
+                    <h2 class="text-center mb-4">Recetas del Día</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="./public/recetas/receta_1.jpg" class="card-img-top" alt="Receta 1">
+                                <div class="card-body">
+                                    <h5 class="fw-bold">Plato de Poder: Proteínas que Te Llenan de Energía</h5>
+                                    <p class="card-text">Comida sabrosa, perfecta para saciarte por un día completo.</p>
+                                    <a href="#" class="btn btn-secondary">Ver receta</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="./public/recetas/receta_2.jpg" class="card-img-top" alt="Receta 2">
+                                <div class="card-body">
+                                    <h5 class="fw-bold">Energía Matutina: Tostada de Aguacate con un Toque de Frescura</h5>
+                                    <p class="card-text">Deliciosa receta para el almuerzo, rápida y fácil de hacer.</p>
+                                    <a href="#" class="btn btn-secondary">Ver receta</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="./public/recetas/receta_3.jpg" class="card-img-top" alt="Receta 3">
+                                <div class="card-body">
+                                    <h5 class="fw-bold">Sopa Vegana: Nutrición y Sabor en Cada Cucharada</h5>
+                                    <p class="card-text">Una opción saludable y sabrosa para tus comidas diarias.</p>
+                                    <a href="#" class="btn btn-secondary">Ver receta</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
-                <div class="recipe-image">
-                    <img src="imgs/sopa-calabaza.jpg" alt="Sopa de calabaza servida en un bowl con hierbas frescas por encima.">
+            </section>
+            
+            <!-- Video Tutorial -->
+            <section class="py-5">
+                <div class="container text-center">
+                    <h2 class="mb-4">Postres de Chocolate</h2>
+                    <div class="ratio ratio-16x9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/JgzkfO8nYKo?si=IsSbgwQ4A_jzE1oH" title="Recetas de chocolate" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
-            </section> -->
-        
-            <!-- Sección Otras Recetas -->
-            <!-- <section class="other-recipes">
-                <h2>Más recetas deliciosas</h2>
-                <div class="recipe-list">
-                    <article class="recipe-card">
-                        <img src="imgs/postre.jpg" alt="Postre de chocolate con fresas.">
-                        <h3>Postre de Chocolate</h3>
-                        <p>Un dulce final perfecto para cualquier comida.</p>
-                        <a href="paginas/recetas/index.html"><button>Descubrir</button></a>
-                    </article>
-                    <article class="recipe-card">
-                        <img src="imgs/ensalada.jpg" alt="Ensalada fresca con frutas y nueces.">
-                        <h3>Ensalada Fresca</h3>
-                        <p>Una opción saludable y ligera para cualquier momento.</p>
-                        <button>Descubrir</button>
-                    </article>
-                    <article class="recipe-card">
-                        <img src="imgs/pasta.jpg" alt="Pasta con salsa de tomate y albahaca.">
-                        <h3>Pasta Clásica</h3>
-                        <p>El sabor tradicional italiano que nunca falla.</p>
-                        <button>Descubrir</button>
-                    </article>
+            </section>
+            
+            <!-- Blog de Noticias -->
+            <section class="section-bg py-5">
+                <div class="container">
+                    <h2 class="text-center mb-4">Últimas Noticias</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="./public/noticias/noticia_1.jpg" class="card-img-top" alt="Noticia 1">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Recetas exprés</h5>
+                                    <p class="card-text">La nueva tendencia de recetas rápidas para personas ocupadas.</p>
+                                    <a href="#" class="btn btn-secondary">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="./public/noticias/noticia_2.jpg" class="card-img-top" alt="Noticia 2">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Secretos de chefs</h5>
+                                    <p class="card-text">Consejos de chefs profesionales locales para mejorar tus platos.</p>
+                                    <a href="#" class="btn btn-secondary">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="./public/noticias/noticia_3.jpg" class="card-img-top" alt="Noticia 3">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Cocinar con lo local</h5>
+                                    <p class="card-text">Los beneficios de cocinar con ingredientes frescos y locales.</p>
+                                    <a href="#" class="btn btn-secondary">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section> -->
+            </section>
         </main>    
 
-        <footer>
-            <div class="footer-content">
-                <p>&copy; 2024 Todos los derechos reservados.</p>
-                <p>
-                    <a href="#privacidad">Política de Privacidad</a> | 
-                    <a href="#terminos">Términos de Uso</a>
-                </p>
-                <p>Contacto: <a href="mailto:alexadrialvaro@gmail.com">alexadrialvaro@gmail.com</a></p>
-            </div>
+        <footer class="py-4 text-center">
+            <p class="footer-text">&copy; 2024 Todos los derechos reservados.</p>
+            <p>
+                <a href="#privacidad">Política de Privacidad</a> | 
+                <a href="#terminos">Términos de Uso</a>
+            </p>
+            <p>Contacto: <a href="mailto:alexadrialvaro@gmail.com">alexadrialvaro@gmail.com</a></p>
         </footer>
 
         <script src="index.js"></script>
