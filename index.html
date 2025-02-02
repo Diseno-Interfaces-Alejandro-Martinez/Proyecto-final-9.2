@@ -87,25 +87,23 @@
                                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                             </li>
                         </ul>
-                        <form class="d-flex" role="search">
+                        <!-- <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+                        </form> -->
                     </div>
 
                     <!-- Aquí se crea el botón para el cambio de tema, como también tiene un desplegable para las opciones creamos una lista no ordenada con las opciones -->
-                    <button class="btn btn-link nav-link py-2 px-0 px-md-2 dropdown-toggle d-flex align-items-center order-md-2" id="bd-theme"
-                        type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static"
-                        aria-label="Toggle theme (auto)">
-                        <svg class="bi my-1 theme-icon-active svg-size">
+                    <button class="btn btn-link nav-link py-2 px-0 px-md-2 dropdown-toggle d-flex align-items-center order-md-2" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
+                        <svg class="bi my-1 theme-icon-active svg-size" id="bigIcon">
                             <use href="#circle-half"></use>
                         </svg>
                     </button>
                     
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
                         <li>
-                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                                <svg class="me-2 opacity-50 svg-size">
+                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false" id="svg">
+                                <svg class="me-3 opacity-50 svg-size">
                                     <use href="#sun-fill"></use>
                                 </svg>
                                 Light
@@ -115,8 +113,8 @@
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                                <svg class="me-2 opacity-50 svg-size">
+                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false" id="svg">
+                                <svg class="me-3 opacity-50 svg-size">
                                     <use href="#moon-stars-fill"></use>
                                 </svg>
                                 Dark
@@ -126,8 +124,8 @@
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                                <svg class="me-2 opacity-50 svg-size">
+                            <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true" id="svg">
+                                <svg class="me-3 opacity-50 svg-size">
                                     <use href="#circle-half"></use>
                                 </svg>
                                 Auto

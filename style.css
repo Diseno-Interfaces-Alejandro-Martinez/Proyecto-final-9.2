@@ -47,6 +47,8 @@
     background-color: #712CF91A!important;
 }
 
+
+
 .check {
     margin-left: auto
 }
@@ -54,4 +56,20 @@
 .svg-size {
     width: 20px;
     height: 20px;
+}
+
+
+
+#bigIcon, #svg {
+    fill: currentColor;
+}
+
+/* Si el modo oscuro está activado */
+[data-bs-theme="dark"] #bigIcon {
+    color: white;
+}
+
+/* Si el modo claro está activado */
+[data-bs-theme="light"] #bigIcon {
+    color: black;
 }
