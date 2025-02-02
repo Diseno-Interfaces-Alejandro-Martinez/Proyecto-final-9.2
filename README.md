@@ -1,2 +1,2 @@
-# Proyecto-DIW-SA05
-Práctica 5.2 - Proyecto DIW: Estructura y estilos básicos - Alejandro Martínez Jiménez
+# Proyecto final DIW
+Práctica 9.2 - Proyecto final DIW - Alejandro Martínez Jiménez

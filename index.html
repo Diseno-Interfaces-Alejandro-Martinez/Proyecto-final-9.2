@@ -1,100 +1,217 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
-    <title>La Cocina Perfecta</title>
-</head>
-<body>
-    
-    <header>
-        <div class="menu flex all-center">
-            <button id="menu-btn">&#9776; Menú</button>
+<html lang="es" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-            <!-- Menú deslizante -->
-            <nav id="sidebar" class="sidebar">
-                <button id="close-btn">&times; Cerrar</button>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#recetas">Recetas</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
+        <meta name="theme-color" content="#712cf9">
+
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        
+        <title>La Cocina Perfecta</title>
+    </head>
+    <body>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+            <symbol id="circle-half" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16" />
+            </symbol>
+            <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+              <path
+                d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+              <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
+            </symbol>
+            <symbol id="sun-fill" viewBox="0 0 16 16">
+              <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+            </symbol>
+            <symbol id="check2" viewBox="0 0 16 16">
+                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+            </symbol>
+        </svg>
+
+        <header>
+            <!-- <div class="menu flex all-center">
+                <button id="menu-btn">&#9776; Menú</button>
+            
+                Menú deslizante
+                <nav id="sidebar" class="sidebar">
+                    <button id="close-btn">&times; Cerrar</button>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#recetas">Recetas</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+
+                Cuando se abra el menú, se oscurecerá el resto de la página
+                <div id="overlay" class="overlay"></div> -->
+            <!-- </div>
+
+            <div class="title flex all-center">
+                <h1>LA COCINA PERFECTA</h1>
+            </div>
+
+            <div class="profile flex all-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-circle profile-icon" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg>
+            </div> -->
+            
+            
+
+
+            <!-- Empezamos el nav -->
+            <nav class="navbar navbar-expand-md bg-body-tertiary">
+                <div class="container-fluid">
+                    <!-- Ponemos el botón con el icono de menú de hamburguesa, que en pantallas pequeñas será el que pulsemos para desplegar el menú, en pantallas a partir de md ya no aparecerá -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- En este div está el contenido del menú que se desplegará al darle al botón en pantallas sm y xs -->
+                    <div class="collapse navbar-collapse order-3 order-md-1" id="navbarTogglerDemo01">
+                        <a class="navbar-brand" href="#">Hidden brand</a>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+
+                    <!-- Aquí se crea el botón para el cambio de tema, como también tiene un desplegable para las opciones creamos una lista no ordenada con las opciones -->
+                    <button class="btn btn-link nav-link py-2 px-0 px-md-2 dropdown-toggle d-flex align-items-center order-md-2" id="bd-theme"
+                        type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static"
+                        aria-label="Toggle theme (auto)">
+                        <svg class="bi my-1 theme-icon-active svg-size">
+                            <use href="#circle-half"></use>
+                        </svg>
+                    </button>
+                    
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                        <li>
+                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                <svg class="me-2 opacity-50 svg-size">
+                                    <use href="#sun-fill"></use>
+                                </svg>
+                                Light
+                                <svg class="check ms-auto d-none svg-size">
+                                    <use href="#check2"></use>
+                                </svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                <svg class="me-2 opacity-50 svg-size">
+                                    <use href="#moon-stars-fill"></use>
+                                </svg>
+                                Dark
+                                <svg class="check ms-auto d-none svg-size">
+                                    <use href="#check2"></use>
+                                </svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                                <svg class="me-2 opacity-50 svg-size">
+                                    <use href="#circle-half"></use>
+                                </svg>
+                                Auto
+                                <svg class="check ms-auto d-none svg-size">
+                                    <use href="#check2"></use>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </nav>
 
-            <!-- Cuando se abra el menú, se oscurecerá el resto de la página -->
-            <div id="overlay" class="overlay"></div>
-        </div>
 
-        <div class="title flex all-center">
-            <h1>LA COCINA PERFECTA</h1>
-        </div>
-
-        <div class="profile flex all-center">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-circle profile-icon" viewBox="0 0 16 16">
-                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-            </svg>
-        </div>
-    </header>
-
-    <div class="main-image">
-        <img src="imgs/principal-image.jpeg" alt="Cheff sonriendo mientras cocina en una cocina moderna y con colores cálidos.">
-        <h2>¡Descubre las recetas más increíbles!</h2>
-    </div>
-
-    <main>
-        <!-- Sección Receta del Día -->
-        <section class="recipe-of-the-day">
-            <div class="recipe-info">
-                <h2>Receta del Día</h2>
-                <p>Prueba esta increíble receta de sopa de calabaza, ideal para el otoño. ¡Llena de sabor y calidez!</p>
-                <button>Ver receta</button>
+            <!-- Background image -->
+            <div id="imagen-principal" class="img-fluid bg-image shadow-2-strong">
+                <div class="mask">
+                    <div class="container d-flex align-items-center justify-content-center text-center h-100">
+                        <div class="text-white" data-mdb-theme="dark">
+                            <h1 class="mb-3">Learn Bootstrap 5 with MDB</h1>
+                            <h5 class="mb-4">Best & free guide of responsive web design</h5>
+                            <a class="btn btn-outline-light btn-lg m-2" data-mdb-ripple-init href="https://www.youtube.com/watch?v=c9B4TPnak1A" role="button" rel="nofollow" target="_blank">Start tutorial</a>
+                            <a class="btn btn-outline-light btn-lg m-2" data-mdb-ripple-init href="https://mdbootstrap.com/docs/standard/" target="_blank" role="button">Download MDB UI KIT</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="recipe-image">
-                <img src="imgs/sopa-calabaza.jpg" alt="Sopa de calabaza servida en un bowl con hierbas frescas por encima.">
-            </div>
-        </section>
-    
-        <!-- Sección Otras Recetas -->
-        <section class="other-recipes">
-            <h2>Más recetas deliciosas</h2>
-            <div class="recipe-list">
-                <article class="recipe-card">
-                    <img src="imgs/postre.jpg" alt="Postre de chocolate con fresas.">
-                    <h3>Postre de Chocolate</h3>
-                    <p>Un dulce final perfecto para cualquier comida.</p>
-                    <a href="paginas/recetas/index.html"><button>Descubrir</button></a>
-                </article>
-                <article class="recipe-card">
-                    <img src="imgs/ensalada.jpg" alt="Ensalada fresca con frutas y nueces.">
-                    <h3>Ensalada Fresca</h3>
-                    <p>Una opción saludable y ligera para cualquier momento.</p>
-                    <button>Descubrir</button>
-                </article>
-                <article class="recipe-card">
-                    <img src="imgs/pasta.jpg" alt="Pasta con salsa de tomate y albahaca.">
-                    <h3>Pasta Clásica</h3>
-                    <p>El sabor tradicional italiano que nunca falla.</p>
-                    <button>Descubrir</button>
-                </article>
-            </div>
-        </section>
-    </main>    
+        </header>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Todos los derechos reservados.</p>
-            <p>
-                <a href="#privacidad">Política de Privacidad</a> | 
-                <a href="#terminos">Términos de Uso</a>
-            </p>
-            <p>Contacto: <a href="mailto:alexadrialvaro@gmail.com">alexadrialvaro@gmail.com</a></p>
-        </div>
-    </footer>        
-    
-    <script src="script.js"></script>
-</body>
+        <main>
+            <!-- Sección Receta del Día -->
+            <!-- <section class="recipe-of-the-day">
+                <div class="recipe-info">
+                    <h2>Receta del Día</h2>
+                    <p>Prueba esta increíble receta de sopa de calabaza, ideal para el otoño. ¡Llena de sabor y calidez!</p>
+                    <button>Ver receta</button>
+                </div>
+                <div class="recipe-image">
+                    <img src="imgs/sopa-calabaza.jpg" alt="Sopa de calabaza servida en un bowl con hierbas frescas por encima.">
+                </div>
+            </section> -->
+        
+            <!-- Sección Otras Recetas -->
+            <!-- <section class="other-recipes">
+                <h2>Más recetas deliciosas</h2>
+                <div class="recipe-list">
+                    <article class="recipe-card">
+                        <img src="imgs/postre.jpg" alt="Postre de chocolate con fresas.">
+                        <h3>Postre de Chocolate</h3>
+                        <p>Un dulce final perfecto para cualquier comida.</p>
+                        <a href="paginas/recetas/index.html"><button>Descubrir</button></a>
+                    </article>
+                    <article class="recipe-card">
+                        <img src="imgs/ensalada.jpg" alt="Ensalada fresca con frutas y nueces.">
+                        <h3>Ensalada Fresca</h3>
+                        <p>Una opción saludable y ligera para cualquier momento.</p>
+                        <button>Descubrir</button>
+                    </article>
+                    <article class="recipe-card">
+                        <img src="imgs/pasta.jpg" alt="Pasta con salsa de tomate y albahaca.">
+                        <h3>Pasta Clásica</h3>
+                        <p>El sabor tradicional italiano que nunca falla.</p>
+                        <button>Descubrir</button>
+                    </article>
+                </div>
+            </section> -->
+        </main>    
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 Todos los derechos reservados.</p>
+                <p>
+                    <a href="#privacidad">Política de Privacidad</a> | 
+                    <a href="#terminos">Términos de Uso</a>
+                </p>
+                <p>Contacto: <a href="mailto:alexadrialvaro@gmail.com">alexadrialvaro@gmail.com</a></p>
+            </div>
+        </footer>
+
+        <script src="index.js"></script>
+
+        <!-- jQuery -->
+		<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+JY8BomFZq4pQsbTEOJzE2I5rJ+Eu2/HR3Bofv2gz00z5A7" crossorigin="anonymous"></script> -->
+		
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
 </html>
