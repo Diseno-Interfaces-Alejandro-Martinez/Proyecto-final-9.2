@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="./public/style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="../../style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">		
+        
         <title>LACOPE</title>
     </head>
     <body>
@@ -40,19 +40,19 @@
 
                     <!-- En este div está el contenido del menú que se desplegará al darle al botón en pantallas sm y xs -->
                     <div class="collapse navbar-collapse order-3 order-md-1" id="navbarTogglerDemo01">
-                        <a class="navbar-brand fw-bold" href="#">LACOPE</a>
+                        <a class="navbar-brand fw-bold" href="./../../../index.html">LACOPE</a>
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                                <a class="nav-link"  href="./../../../index.html">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./public/pages/recetas/muchas/index.html">Recetas</a>
+                                <a class="nav-link" href="../recetas/muchas/index.html">Recetas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./public/pages/noticias/muchas/index.html">Blog</a>
+                                <a class="nav-link" href="../noticias/muchas/index.html">Blog</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./public/pages/contacto/index.html">Contacto</a>
+                                <a class="nav-link active" aria-current="page" href="#">Contacto</a>
                             </li>
                         </ul>
                     </div>
@@ -122,109 +122,32 @@
         </header>
 
 
-        <!-- Imagen de fondo e información de bienvenida -->
-        <div id="imagen-principal" class="img-fluid bg-image shadow-2-strong">
-            <div class="mask">
-                <div class="container d-flex align-items-center justify-content-center text-center h-100">
-                    <div class="text-white" data-mdb-theme="dark">
-                        <h1 class="mb-3 text fw-bold display-2">LACOPE</h1>
-                        <h5 class="mb-4">Descubre recetas deliciosas, tutoriales en video y consejos de chefs expertos</h5>
-                        <a class="btn btn-outline-light btn-lg m-2" href="#recetas">Explorar Recetas</a>
-                    </div>
+        <!-- Contenido -->
+        <main class="container py-5">
+            <h1 class="text-center">Contacto</h1>
+            <p class="text-center">Si tienes alguna consulta, no dudes en escribirnos.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="contact-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                    </form>
+                    <div id="form-message" class="mt-3 text-center"></div>
                 </div>
             </div>
-        </div>
-
-
-        <!-- Contenido -->
-        <main>
-            <section id="recetas" class="section-bg py-5">
-                <div class="container">
-                    <h2 class="text-center mb-4">Recetas del Día</h2>
-                    <div class="row">
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src="./public/recetas/receta_1.jpg" class="card-img-top" alt="Receta 1">
-                                <div class="card-body">
-                                    <h5 class="fw-bold">Plato de Poder: Proteínas que Te Llenan de Energía</h5>
-                                    <p class="card-text">Comida sabrosa, perfecta para saciarte por un día completo.</p>
-                                    <a href="./public/pages/recetas/una/index.html" class="btn btn-secondary">Ver receta</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src="./public/recetas/receta_2.jpg" class="card-img-top" alt="Receta 2">
-                                <div class="card-body">
-                                    <h5 class="fw-bold">Energía Matutina: Tostada de Aguacate con un Toque de Frescura</h5>
-                                    <p class="card-text">Deliciosa receta para el almuerzo, rápida y fácil de hacer.</p>
-                                    <a href="#" class="btn btn-secondary">Ver receta</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src="./public/recetas/receta_3.jpg" class="card-img-top" alt="Receta 3">
-                                <div class="card-body">
-                                    <h5 class="fw-bold">Sopa Vegana: Nutrición y Sabor en Cada Cucharada</h5>
-                                    <p class="card-text">Una opción saludable y sabrosa para tus comidas diarias.</p>
-                                    <a href="#" class="btn btn-secondary">Ver receta</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Video Tutorial -->
-            <section class="py-5">
-                <div class="container text-center">
-                    <h2 class="mb-4">Postres de Chocolate</h2>
-                    <div class="ratio ratio-16x9">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/JgzkfO8nYKo?si=IsSbgwQ4A_jzE1oH" title="Recetas de chocolate" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Blog de Noticias -->
-            <section class="section-bg py-5">
-                <div class="container">
-                    <h2 class="text-center mb-4">Últimas Noticias</h2>
-                    <div class="row">
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src="./public/noticias/noticia_1.jpg" class="card-img-top" alt="Noticia 1">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Recetas exprés</h5>
-                                    <p class="card-text">La nueva tendencia de recetas rápidas para personas ocupadas.</p>
-                                    <a href="#" class="btn btn-secondary">Leer más</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src="./public/noticias/noticia_2.jpg" class="card-img-top" alt="Noticia 2">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Secretos de chefs</h5>
-                                    <p class="card-text">Consejos de chefs profesionales locales para mejorar tus platos.</p>
-                                    <a href="#" class="btn btn-secondary">Leer más</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src="./public/noticias/noticia_3.jpg" class="card-img-top" alt="Noticia 3">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Cocinar con lo local</h5>
-                                    <p class="card-text">Los beneficios de cocinar con ingredientes frescos y locales.</p>
-                                    <a href="#" class="btn btn-secondary">Leer más</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </main>
+
 
         <footer class="py-4 text-center">
             <p class="footer-text">&copy; 2024 Todos los derechos reservados.</p>
@@ -234,7 +157,10 @@
             </p>
         </footer>
 
-        <script src="./public/index.js"></script>
+
+        <!-- Toggle light modes and JQuery -->
+        <script src="../../index.js"></script>
+        <script src="index.js" defer></script>
 
         <!-- Bootstrap Bundle with Popper & jQuery -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

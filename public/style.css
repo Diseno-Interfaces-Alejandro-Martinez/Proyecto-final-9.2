@@ -3,7 +3,7 @@
 }
 
 #imagen-principal {
-    background-image: url('./public/fondo_principal.jpeg');
+    background-image: url('./fondo_principal.jpeg');
     height: 100dvh;
 }
 
